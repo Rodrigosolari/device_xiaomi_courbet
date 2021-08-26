@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2020 The LineageOS Project
+# Copyright (C) 2021 Nusantara Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -7,14 +7,16 @@
 # Inherit from sweet device
 $(call inherit-product, device/xiaomi/courbet/device.mk)
 
-# Inherit some common XPerience stuff.
-$(call inherit-product, vendor/xperience/config/common.mk)
-
-TARGET_SCREEN_HEIGHT := 2400
-TARGET_SCREEN_WIDTH := 1080
+# Inherit some common Nusantara stuff.
+$(call inherit-product, vendor/nusantara/config/common_full_phone.mk)
+NAD_BUILD_TYPE := OFFICIAL
+TARGET_BOOT_ANIMATION_RES := 1080
+USE_PIXEL_CHARGING := true
+TARGET_USES_BLUR := true
+TARGET_GAPPS_ARCH := arm64
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := xperience_courbet
+PRODUCT_NAME := nad_courbet
 PRODUCT_DEVICE := courbet
 PRODUCT_BRAND := Mi
 PRODUCT_MODEL := Mi 11 Lite
