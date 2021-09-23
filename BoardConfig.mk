@@ -132,3 +132,4 @@ TARGET_RECOVERY_DEVICE_MODULES := libinit_courbet
 
 # Properties
 TARGET_SYSTEM_PROP := $(DEVICE_PATH)/system.prop
+TARGET_PRODUCT_PROP := $(DEVICE_PATH)/product.prop
